@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.ttms.disatel" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <platform name="android">
+        <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
+    </platform>
+    <feature name="Camera">
+        <param name="browser-package" value="Camera" />
+    </feature>
+    <feature name="Device">
+        <param name="browser-package" value="Device" />
+    </feature>
+    <name>AppTTMS</name>
+    <description>
+        Aplicacion para solicitudes de Transportes
+    </description>
+    <author email="alinton.gutierrez@grupodisatel.com" href="http://appdisatelni.com">
+        Grupo Disatel NI
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <access origin=".*" />
+    <access origin="appdisatelni.com" subdomains="true" />
+    <access origin="191.98.228.86" subdomains="true" />
+    <access origin="*.191.98.228.86" subdomains="true" />
+    <access origin="http://127.0.0.1*" />
+    <access origin="content:///*" />
+    <allow-navigation href="*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <network-security-config>
+        <domain-config cleartextTrafficPermitted="true">
+            <domain>191.98.228.86</domain>
+            <domain>appdisatelni.com</domain>
+            <domain>maps.googleapis.com</domain>
+        </domain-config>
+    </network-security-config>
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="16" />
+    <preference name="android-targetSdkVersion" value="28" />
+    <preference name="phonegap-version" value="cli-9.0.0" />
+</widget>
