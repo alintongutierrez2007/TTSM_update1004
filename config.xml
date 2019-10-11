@@ -140,13 +140,18 @@ xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://pho
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+
+	
+<config-file platform="android" parent="/manifest" mode="merge">
+<application android:usesCleartextTraffic="true" />
+</config-file>
 	
 		 
 	
 	<network-security-config>
    <domain-config cleartextTrafficPermitted="true">
      <domain>191.98.228.86</domain>
-	 <domain>appdisatelni.com</domain>
+	 <domain includeSubdomains="true">appdisatelni.com</domain>
 	 <domain>appdisatelni.com</domain>
 	 <domain>maps.googleapis.com</domain>
    </domain-config>
